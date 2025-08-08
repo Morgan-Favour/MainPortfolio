@@ -23,7 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
-  python
+  python,
+  moviefinder,
+  movieretail
 } from "../assets";
 
 
@@ -118,58 +120,46 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Frontend Developer Intern",
+    company_name: "Literesults",
+    icon: meta,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2023 - December 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed user interfaces for web applications using React.js and Tailwind CSS, enhancing user experience and responsiveness.",
+      "Collaborated with designers and senior developers to implement pixel-perfect designs and ensure cross-browser compatibility.",
+      "Assisted in debugging and optimizing frontend code, improving page load times by 15%.",
+      "Participated in agile team meetings, contributing to sprint planning and code reviews.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
+    title: "Python Developer Intern",
+    company_name: "Bincom Dev Center",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "January 2024 - July 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Built and maintained server-side logic for web applications using Python and Django, integrating with frontend interfaces.",
+      "Collaborated with a team of developers to create RESTful APIs, enabling seamless data communication between frontend and backend.",
+      "Contributed to database management and optimization, ensuring efficient data retrieval and storage.",
+      "Engaged in code reviews, adopting best practices for clean and scalable Python code.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
+    title: "Web Developer Intern",
+    company_name: "Nexlify Solutions",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "August 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed full-stack web applications using React.js, Node.js, and MongoDB for small business clients.",
+      "Worked closely with product managers to implement responsive designs and enhance user interaction flows.",
+      "Integrated third-party APIs to add features like payment gateways and analytics tracking.",
+      "Participated in weekly code reviews, providing feedback to improve team code quality.",
     ],
   },
 ];
+
 
 const testimonials = [
   {
@@ -220,10 +210,11 @@ const projects = [
     image: carrent,
     source_code_link: "https://github.com/",
   },
+
   {
-    name: "Job IT",
+    name: "Movie Finder",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A streamlined web app for movie lovers. Search movies by title with real-time results. Discover your next watch with a simple, intuitive interface.",
     tags: [
       {
         name: "react",
@@ -234,34 +225,77 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: moviefinder,
+    source_code_link: "https://github.com/Morgan-Favour/Movie-App",
   },
+
   {
-    name: "Trip Guide",
+    name: "Movie Retail Dashboard",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A web app for movie retail owners. Manage inventory, track sales, and update stock in real-time. View detailed reports on movie rentals, purchases, and customer trends. Simplify operations with an easy-to-use, secure interface.",
     tags: [
       {
-        name: "nextjs",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: movieretail,
+    source_code_link: "https://github.com/Morgan-Favour/Movie-App",
   },
+  // {
+  //   name: "Job IT",
+  //   description:
+  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "restapi",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "scss",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: jobit,
+  //   source_code_link: "https://github.com/",
+  // },
+  // {
+  //   name: "Trip Guide",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, project };

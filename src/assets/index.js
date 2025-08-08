@@ -30,6 +30,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import moviefinder from "./moviefinder.png"
+import movieretail from "./movieretail.png"
 
 export {
   logo,
@@ -61,4 +63,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  moviefinder,
+  movieretail
+
 };
