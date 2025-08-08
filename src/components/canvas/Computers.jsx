@@ -10,11 +10,11 @@ const Computers = ({ isMobile }) => {
   return (
     <mesh>
       <ambientLight intensity={0.5} />
-      <hemisphereLight intensity={2} groundColor='black' />
+      <hemisphereLight intensity={2} groundColor="black" />
       <pointLight intensity={10} />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}  
+        angle={0.12}
         penumbra={1}
         intensity={1}
         castShadow
@@ -23,8 +23,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 0.5}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 0.45 : 0.5} // Slightly increased scale for mobile to make it more prominent
+        position={isMobile ? [0, -2, -1] : [0, -3.25, -1.5]} // Adjusted Y and Z to center on mobile
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -35,21 +35,15 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
@@ -57,11 +51,15 @@ const ComputersCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
+      frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{
+        position: isMobile ? [15, 2, 3] : [20, 3, 5], // Adjusted camera for mobile
+        fov: isMobile ? 35 : 25, // Wider FOV for mobile to fit the object better
+      }}
       gl={{ preserveDrawingBuffer: true }}
+      style={{ height: isMobile ? "60vh" : "100vh" }} // Reduced height on mobile to avoid overlap
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -71,7 +69,6 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
