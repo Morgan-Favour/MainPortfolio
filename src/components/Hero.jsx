@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className="relative w-full h-[80vh]">
+      <div className="relative w-full h-[100vh] mt-10">
         <ComputersCanvas /> 
       </div>
 
